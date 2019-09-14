@@ -2,13 +2,6 @@
 <head>
 <meta charset="UTF-8">
 <title>data view</title>
-<!--
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<link href="/static/bootstrap.min.css" rel="stylesheet">
-<link href="/static/bootstrap-grid.min.css" rel="stylesheet">
-<script src="/static/bootstrap.min.js"></script>
-<div class="ui stackable grid"></div>
--->
 <script src="/static/jquery-3.3.1.min.js"></script>
 <link rel="stylesheet" href="/static/datatables.min.css"/> 
 <script src="/static/datatables.min.js"></script>
@@ -43,9 +36,6 @@ a {
 <body>
 <div class="ui container"><h1>data view</h1></div>  
 <div class="ui column grid centered">
-  <!--
-  <script id="m_player" type="application/javascript" src="https://embed.nicovideo.jp/watch/sm35558082/script?w=640&h=360"></script>
-  -->
   <iframe id="nazo" allow="autoplay" width="640" height="360" src="https://embed.nicovideo.jp/watch/sm35676084"></iframe>
 </div>
 <div class="ui container">
@@ -64,7 +54,7 @@ a {
         <td>{{ row.1 }}</td>
         <td><a href="{{ row.0 }}">{{ row.2 }}</a></td>
         <td>{{ row.3 }}</td>
-        <td><button class="button_test" id="{{ row.4 }}">change</button></td>
+        <td><button class="ui button button_test" id="{{ row.4 }}">change</button></td>
       </tr>
       {% endfor %}
     </tbody>
@@ -73,9 +63,6 @@ a {
 <script>
 jQuery(function($){
   $('.button_test').click(function(){
-    // console.log($(this).attr('id'));
-    //var changeL = $('iframe').attr('src').replace('sm35558082' , $(this).attr('id'));
-    //$('iframe').attr('src', changeL);
     $('#nazo').attr('src', 'https://embed.nicovideo.jp/watch/' + $(this).attr('id'))
   });
 });
