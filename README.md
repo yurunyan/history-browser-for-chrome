@@ -12,3 +12,8 @@
 # ぼやき
 
 - bootstrapを使おうと思って途中でsemantic UIの存在を知ったためその跡形がコメントとかで残ってます。ごめんなさい。 
+
+# 動作イメージ
+
+- flask
+![image](https://user-images.githubusercontent.com/24700480/64904433-029a8480-d705-11e9-974e-53b4acf0bb75.png)
